@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import "./App.css";
 import "./Components/Form/Form.css";
 import "./Components/SaveBox/SaveBox.css";
@@ -7,12 +7,21 @@ import Form from "./Components/Form/Form";
 import SaveBox from "./Components/SaveBox/SaveBox";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(() => {
+    const saved = localStorage.getItem("notes");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <>
-        <SaveBox notes={notes} setNotes={setNotes} />
+      <div>
         <Form notes={notes} setNotes={setNotes} />
+        <SaveBox notes={notes} setNotes={setNotes} />
+      </div>
     </>
   );
 }

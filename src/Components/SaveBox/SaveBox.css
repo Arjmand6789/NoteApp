@@ -1,6 +1,6 @@
 .SaveBox {
   padding: 10px;
-  width: 60%;
+  width: 100%;
   height: 70vh;
   border-radius: 20px;
   background-color: #427a76;
@@ -11,6 +11,8 @@
   border: 2px solid black;
 }
 .items {
+  display: flex;
+  flex-direction: column;
   padding: 10px 10px;
   background-color: #174143;
   width: 100%;
@@ -33,7 +35,7 @@
   border-radius: 50px;
 }
 .Note {
-  padding: 0 70px;
+  padding: 0 20px;
   justify-content: space-between;
   display: flex;
   align-items: center;

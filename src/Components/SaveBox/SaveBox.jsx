@@ -13,7 +13,7 @@ function SaveBox({ notes, setNotes }) {
 
       <div className="items">
         {notes.map((note) => (
-          <NoteItem key={note.id} boxNote={note} onDelete={handleDelete} />
+          <NoteItem key={note.id} boxNote={note} onDelete={handleDelete} setNotes={setNotes} />
         ))}
       </div>
     </div>

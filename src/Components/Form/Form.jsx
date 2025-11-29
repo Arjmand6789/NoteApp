@@ -13,6 +13,7 @@ function Form({ setNotes, notes }) {
       id: new Date().toISOString(),
       isFinished: false,
     };
+    
 
     setNotes((prev) => [...prev, newNote]);
     setTitle("");
@@ -39,7 +40,6 @@ function Form({ setNotes, notes }) {
             className="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            required
           ></textarea>
 
           <input type="submit" className="Submit" value="Add Note" />
