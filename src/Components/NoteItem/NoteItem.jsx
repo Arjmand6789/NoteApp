@@ -1,3 +1,5 @@
+import "./NoteItem.css";
+
 function NoteItem({ boxNote, onDelete, setNotes }) {
   const handleComplete = (id) => {
     setNotes((prev) =>
@@ -8,9 +10,9 @@ function NoteItem({ boxNote, onDelete, setNotes }) {
   };
 
   return (
-    <div className="Note">
+    <div className={`Note ${boxNote.isFinished ? "completed" : ""}`} >
       <h4>{boxNote.title}</h4>
-      <p>{boxNote.description}</p>
+      <p className="p">{boxNote.description}</p>
       <small>{boxNote.id}</small>
 
       <button onClick={() => onDelete(boxNote.id)}>

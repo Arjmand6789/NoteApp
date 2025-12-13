@@ -1,5 +1,21 @@
-button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Note {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.Note.completed {
+  background-color: #94bba3;
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: #000000;
 }
