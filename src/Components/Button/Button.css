@@ -1,0 +1,14 @@
+.buttuns{
+    width: 120px;
+    height: 50px;
+    background-color: #f5e5e1;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+.active:hover{
+    background-color: #427a76;
+}
+
+.active{
+    background-color: #3e7774;
+}
